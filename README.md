@@ -1,8 +1,8 @@
-# FinRisk 📈
+# FinRisk 
 
 FinRisk is a comprehensive machine learning and data analysis project designed to assess and predict financial risk. It leverages historical data, exploratory data analysis (EDA), and advanced machine learning models (such as XGBoost) to extract insights and evaluate potential financial defaults or risks.
 
-## 🚀 Features
+##  Features
 
 - **Data Extraction**: Connects seamlessly to a MySQL database to extract financial data (`connect_to_sql.ipynb`).
 - **Exploratory Data Analysis (EDA)**: In-depth statistical analysis and visualizations to understand the dataset (`eda.ipynb`).
@@ -11,7 +11,7 @@ FinRisk is a comprehensive machine learning and data analysis project designed t
 - **Model Evaluation**: Comprehensive evaluation using SHAP values and performance metrics to ensure model interpretability and accuracy (`modelEvaluation.ipynb`).
 - **Model Deployment & Testing**: Scripts for testing saved models and preparing for deployment via Streamlit (`test_saved_model.ipynb`).
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 - **Data Manipulation & Analysis**: `pandas`, `numpy`
 - **Machine Learning**: `scikit-learn`, `xgboost`
@@ -21,7 +21,7 @@ FinRisk is a comprehensive machine learning and data analysis project designed t
 - **Web App / UI**: `streamlit`
 - **Testing & Environment Management**: `pytest`, `python-dotenv`, `joblib`
 
-## 📁 Project Structure
+##  Project Structure
 
 ```text
 finrisk/
@@ -39,7 +39,7 @@ finrisk/
 └── requirements.txt       # Project dependencies
 ```
 
-## ⚙️ Setup and Installation
+##  Setup and Installation
 
 1. **Clone the repository:**
    ```bash
@@ -64,7 +64,7 @@ finrisk/
    cp .env.example .env
    ```
 
-## 📊 Usage
+##  Usage
 
 Navigate to the project directory and open Jupyter Notebook or JupyterLab to interact with the project step-by-step:
 
@@ -73,5 +73,5 @@ jupyter notebook
 ```
 Follow the sequential flow of notebooks from `notebooks/connect_to_sql.ipynb` down to model evaluation.
 
-## 🤝 Contributing
+##  Contributing
 Contributions, issues, and feature requests are welcome! Feel free to open an issue or submit a pull request if you want to contribute.
