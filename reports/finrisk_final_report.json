@@ -1,0 +1,99 @@
+{
+    "project_name": "FinRisk \u2014 End-to-End Credit Risk & Loan Analytics Platform",
+    "objective": "Analyze loan portfolio data, predict loan default risk, and provide explainable insights for financial risk analysis.",
+    "dataset": {
+        "source_file": "loan.csv",
+        "ml_dataset_rows": 1303638,
+        "feature_count": 70,
+        "target_definition": {
+            "0": "Fully Paid",
+            "1": "Charged Off or Default"
+        },
+        "target_distribution": {
+            "class_0_count": 1041952,
+            "class_1_count": 261686,
+            "default_rate_percent": 20.07
+        }
+    },
+    "data_engineering": [
+        "Cleaned and filtered loan records",
+        "Created a binary default-risk target",
+        "Removed identifier columns from model features",
+        "Handled infinite and missing values",
+        "Created relational tables in MySQL",
+        "Validated borrower, loan, and credit-profile records"
+    ],
+    "machine_learning": {
+        "split_method": "Stratified random train-test split",
+        "test_size": 0.2,
+        "random_state": 42,
+        "preprocessing": [
+            "Median imputation",
+            "StandardScaler for Logistic Regression"
+        ],
+        "models_evaluated": [
+            "Logistic Regression",
+            "Random Forest",
+            "XGBoost"
+        ]
+    },
+    "model_comparison": [
+        {
+            "model": "Logistic Regression",
+            "accuracy": 0.6602,
+            "precision": 0.3257,
+            "recall": 0.6474,
+            "f1_score": 0.4334,
+            "roc_auc": 0.7129,
+            "pr_auc": 0.3739
+        },
+        {
+            "model": "Random Forest",
+            "accuracy": 0.653,
+            "precision": 0.3227,
+            "recall": 0.6629,
+            "f1_score": 0.434,
+            "roc_auc": 0.7156,
+            "pr_auc": 0.3814
+        },
+        {
+            "model": "XGBoost",
+            "accuracy": 0.661,
+            "precision": 0.3316,
+            "recall": 0.6779,
+            "f1_score": 0.4453,
+            "roc_auc": 0.7292,
+            "pr_auc": 0.4018
+        }
+    ],
+    "final_model": {
+        "name": "XGBoost",
+        "reason": "XGBoost achieved the highest ROC-AUC, PR-AUC, recall, precision, and F1-score among the evaluated models.",
+        "saved_model": "models/finrisk_xgboost_model.pkl",
+        "saved_preprocessor": "models/finrisk_preprocessor.pkl"
+    },
+    "explainability": {
+        "methods": [
+            "Logistic Regression coefficients",
+            "Random Forest feature importance",
+            "SHAP global feature importance",
+            "SHAP individual loan explanation"
+        ],
+        "important_features": [
+            "int_rate",
+            "installment",
+            "loan_amnt",
+            "dti",
+            "funded_amnt",
+            "annual_inc",
+            "acc_open_past_24mths",
+            "delinq_2yrs"
+        ]
+    },
+    "limitations": [
+        "Evaluation used a stratified random split rather than temporal validation",
+        "Model performance depends on the available dataset and feature quality",
+        "Feature relationships should not be interpreted as causal effects",
+        "Further calibration and external validation would be required for production use"
+    ]
+}

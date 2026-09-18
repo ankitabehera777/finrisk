@@ -1,13 +1,12 @@
-# Security
+# Environment & Secrets
 .env
+.env.*
+!.env.example
 
-# Large Data Files & Databases
-*.csv
-*.db
-*.sqlite3
-data/
-
-# Python Virtual Environment
+# Virtual Environments
+venv/
+env/
+ENV/
 Lib/
 Scripts/
 Include/
@@ -15,6 +14,24 @@ etc/
 share/
 pyvenv.cfg
 
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints/
+# Datasets & Databases
+*.csv
+*.db
+*.sqlite3
+data/
+
+# Model Binaries & Serialized Weights
+*.pkl
+*.joblib
+*.h5
+*.onnx
+
+# Evaluation Images & Plots in Root
+*.png
+*.jpg
+*.jpeg
+
+# Python & Notebook Artifacts
 __pycache__/
+*.py[cod]
+.ipynb_checkpoints/
