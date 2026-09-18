@@ -35,3 +35,13 @@ data/
 __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
+
+# Datasets & Databases
+*.db
+*.sqlite3
+data/raw/
+
+# Allow the processed directory and all files within it
+!data/
+!data/processed/
+!data/processed/**

@@ -1,0 +1,32 @@
+{
+    "project": "FinRisk",
+    "task": "Binary loan-default classification",
+    "target": {
+        "0": "Fully Paid",
+        "1": "Charged Off or Default"
+    },
+    "dataset": {
+        "rows": 1303638,
+        "features": 70,
+        "train_rows": 1042910,
+        "test_rows": 260728
+    },
+    "models": {
+        "Logistic Regression": {
+            "accuracy": 0.6602,
+            "precision": 0.3257,
+            "recall": 0.6474,
+            "f1_score": 0.4334,
+            "roc_auc": 0.7129,
+            "pr_auc": 0.3739
+        },
+        "Random Forest": {
+            "accuracy": 0.653,
+            "precision": 0.3227,
+            "recall": 0.6629,
+            "f1_score": 0.434,
+            "roc_auc": 0.7156,
+            "pr_auc": 0.3814
+        }
+    }
+}
